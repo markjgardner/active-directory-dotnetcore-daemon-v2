@@ -38,8 +38,8 @@ namespace TodoList_WebApi
             // Creating policies that wraps the authorization requirements.
             services.AddAuthorization(options =>
             {
-                // The application should only allow tokens which roles claim contains "DaemonAppRole")
-                options.AddPolicy("DaemonAppRole", policy => policy.RequireRole("DaemonAppRole"));
+                // The application should only allow tokens which roles claim contains "ClientAppRole")
+                options.AddPolicy("ClientAppRole", policy => policy.RequireRole("ClientAppRole"));
             });
 
             services.AddControllers();
